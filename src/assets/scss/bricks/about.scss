@@ -1,0 +1,80 @@
+// brick-about
+
+.brick-about {
+    padding: 40px 15px;
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: $w-white;
+    text-align: center;
+    @include mq('tablet') {
+        padding: 50px 15px;
+        font-size: 1rem;
+    }
+    @include mq('desktop') {
+        padding: 70px 10px;
+        font-size: 1.125rem;
+    }
+    .brick-about__title {
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+        letter-spacing: -0.4px;
+        line-height: 1.3;
+        &.lib-mb-0 {margin-bottom: 0;}
+        @include mq('tablet') {
+            font-size: 1.875rem;
+            letter-spacing: -1.5px;
+        }
+        @include mq('desktop') {
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            letter-spacing: -0.2px;
+        }
+    }
+    .brick-about__img {
+        display: inline-block;
+        margin-top: 30px;
+        text-align: center;
+        @include mq('tablet') {
+            margin-top: 40px;
+            img {width: 100%;}
+        }
+        @include mq('desktop') {
+            margin-top: 50px;
+        }
+    }
+    img {
+        margin: 0 auto;
+    }
+    &__warn {
+        margin-top: 20px;
+        text-align: left;
+        @include mq('tablet') {
+            font-size: 0.875rem;
+            .title {
+                display: inline-block;
+                width: 100px;
+                vertical-align: top;
+            }
+            .list {
+                display: inline-block;
+            }
+        }
+        @include mq('desktop') {
+            margin-top: 40px;
+            font-size: 1rem;
+        }
+    }
+    .btn--detail-view {
+        margin-top: 20px;
+        @include mq('tablet') {
+            margin-top: 30px;
+        }
+        @include mq('desktop') {
+            margin-top: 40px;
+        }
+    }
+    &.white {
+        background: $w-white;
+        color: $w-333;
+    }
+}
