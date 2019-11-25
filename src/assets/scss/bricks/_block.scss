@@ -1,0 +1,24 @@
+// conts-block
+
+.conts-block {
+    padding: 40px 15px;
+    @include mq('tablet') {
+        padding: 50px 15px;
+    }
+    @include mq('desktop') {
+        padding: 70px 10px;
+    }
+    header {
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-align: center;
+        @include mq('tablet') {
+            font-size: 1.875rem;
+            letter-spacing: -1px;
+        }
+        @include mq('desktop') {
+            font-size: 40px;
+            letter-spacing: -1.4px;
+        }
+    }
+}

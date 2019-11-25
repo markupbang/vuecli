@@ -1,0 +1,375 @@
+
+//20190802 / 상담하기 폼 브릭 생성 / 이해준
+
+.brick-quotation {
+    &-header {
+        position: relative;
+        padding: 25px 0;
+        background-image: linear-gradient($w-white, $w-head-bottom);
+        text-align: center;
+        @include mq('desktop') {
+            padding: 50px 0;
+        }
+        &__title {
+            font-size: 1.25rem;
+            letter-spacing: -0.7px;
+            @include mq('tablet') {
+                margin-bottom: 5px;
+                font-size: 1.5rem;
+                letter-spacing: -0.84px;
+            }
+            @include mq('desktop') {
+                font-size: 1.75rem;
+                letter-spacing: -0.98px;
+            }
+        }
+        &__desc {
+            display: none;
+            @include mq('tablet') {
+                display: block;
+                font-size: 0.875rem;
+                font-weight: 300;
+                letter-spacing: -0.28px;
+            }
+            @include mq('desktop') {
+                font-size: 1rem;
+                letter-spacing: -0.56px;
+            }
+        }
+    }
+    &-content {
+        &.type02 {
+            padding: 30px 15px;
+            @include mq('tablet') {
+                padding: 50px 15px;
+            }
+            @include mq('desktop') {
+                padding: 60px 10px;
+            }
+            .brick-quotation__caption {
+                float: right;
+                margin-top: -20px;
+                padding-bottom: 10px;
+                font-size: 0.875rem;
+                font-weight: 400;
+                color: $w-333;
+                @include mq('desktop') {
+                    margin-top: -30px;
+                    padding-bottom: 20px;
+                    font-size: 16px;
+                }
+            }
+        }
+        padding: 30px 15px;
+        @include mq('tablet') {
+            padding: 40px 15px;
+        }
+        @include mq('desktop') {
+            padding: 70px 10px;
+        }
+        .captcha_img {
+            img {
+                margin: 0 10px;
+            }
+        }
+        .refresh {
+            font-size: 0.875rem;
+            letter-spacing: -0.28px;
+            @include mq('desktop') {
+                font-size: 1rem;
+                letter-spacing: -0.32px;
+            }
+        }
+        &-mb {
+            &__title {
+                margin-bottom: 5px;
+                font-size: 0.875rem;
+                letter-spacing: -0.28px;
+                .compulsory {
+                    margin: 0 3px;
+                    color: $w-compulsory;
+                }
+            }
+            .gt-input {
+                margin-bottom: 10px;
+            }
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+        &__table {
+            display: none;
+            width: 100%;
+            border-top: 2px solid $w-6f;
+            border-bottom: 1px solid $w-999;
+            border-collapse: collapse;
+            tr:last-child {
+                th, td {
+                    border-bottom: 0;
+                }
+            }
+            th {
+                width: 120px;
+                padding: 0 25px;
+                border-bottom: 1px solid $w-e4;
+                background: $w-steel-gray;
+                font-size: 0.875rem;
+                text-align: left;
+                letter-spacing: -0.28px;
+                @include mq('desktop') {
+                    width: 180px;
+                    padding: 0 30px;
+                    font-size: 1rem;
+                    letter-spacing: -0.32px;
+                }
+                .compulsory {
+                    margin: 0 3px;
+                    color: $w-compulsory;
+                }
+            }
+            td {
+                padding: 15px 20px;
+                border-bottom: 1px solid $w-e4;
+                @include mq('desktop') {
+                    padding: 20px 30px;
+                }
+            }
+            @include mq('tablet') {
+                display: table;
+                input {
+                    width: 45%;
+                }
+            }
+        }
+        &__agree {
+            margin: 20px 0 30px;
+            font-size: 0.875rem;
+            @include mq('desktop') {
+                margin: 30px 0 40px;
+                font-size: 1rem;
+                letter-spacing: -0.32px;
+            }
+            .terms {
+                display: none;
+                margin: 20px 0 0;
+                padding: 20px;
+                border: 1px solid $collapseline;
+                background: $w-steel-gray;
+                color: $w-666;
+                p {
+                    color: $w-333;
+                }
+                .w-list {
+                	> li {
+                		text-align: left;
+                		+ li {padding: 0;}
+                	}
+                }
+            }
+            .gt-btn-toggle {
+                float: none;
+                margin-left: 15px;
+                vertical-align: top;
+                font-size: .875rem;
+                @include mq('desktop') {
+                    margin-top: 0;
+                    font-size: 18px;
+                }
+            }
+        }
+        &__button {
+            text-align: center;
+            .btn-basic {
+                width: 85px;
+                padding: 6px 0;
+                @include mq('desktop') {
+                    width: 110px;
+                    padding: 12px 0;
+                }
+            }
+            .btn-basic-blue {
+                width: 110px;
+                margin-right: 10px;
+                padding: 6px 0;
+                @include mq('desktop') {
+                    width: 140px;
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+    .w-table {
+        border-top: 0;
+        @include mq('tablet') {
+            border-top: 2px solid #6f6f6f;
+        }
+        &.mb_border_0 {
+            border-color: #6f6f6f;
+            th, td {
+                border-color: $w-white;
+                @include mq('tablet') {
+                    border-color: #e4e4e4;
+                }
+            }
+        }
+        th, td {
+            padding: 5px 0;
+            border-color: transparent;
+            @include mq('tablet') {
+                padding: 15px 20px;
+                border-color: #e4e4e4;
+            }
+            @include mq('desktop') {
+                padding: 20px 30px;
+            }
+            .compulsory {
+                margin: 0 3px;
+                color: $w-compulsory;
+            }
+            label + label {
+                margin-left: 10px;
+                @include mq('tablet') {
+                    margin-left: 20px;
+                }
+                @include mq('desktop') {
+                    margin-left: 30px;
+                }
+            }
+        }
+        th {
+            display: none;
+            @include mq('tablet') {
+                display: table-cell;
+            }
+        }
+        h4 {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.75rem;
+            font-weight: 400;
+            @include mq('tablet') {
+                display: none;
+            }
+        }
+        .wd-input {
+            width: 100%;
+            @include mq('tablet') {
+                width: 50%;
+            }
+            @include mq('desktop') {
+                width: 40%;
+            }
+        }
+        .wd-tel {
+            width: calc(33.1% - 10px);
+            @include mq('tablet') {
+                width: 15%;
+            }
+            @include mq('desktop') {
+                width: 12%;
+            }
+        }
+        .wd-email_1 {
+            width: calc(40% - 20px);
+            margin-bottom: 5px;
+            @include mq('tablet') {
+                width: 25%;
+                margin-bottom: 0;
+            }
+            @include mq('desktop') {
+                width: 20%
+            }
+        }
+        .wd-email_2 {
+            width: 60%;
+            margin-bottom: 5px;
+            @include mq('tablet') {
+                width: 30%;
+                margin-bottom: 0;
+            }
+            @include mq('desktop') {
+                width: 25%;
+            }
+        }
+        .wd-select {
+            width: 100%;
+            @include mq('tablet') {
+                width: 32%;
+            }
+            @include mq('desktop') {
+                width: 25%;
+            }
+        }
+        .wd-add {
+            width: calc(100% - 145px);
+            @include mq('tablet') {
+                width: 50%;
+            }
+            @include mq('desktop') {
+                width: 40%;
+            }
+        }
+        .space__bar{
+            display: inline-block;
+            width: 16px;
+            text-align: center;
+        }
+        .space__at{
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        .btn-basic-blue {
+            &.search {
+                width: 83px;
+                margin-left: 10px;
+                padding: 6px 0 7px;
+                @include mq('tablet') {
+                    width: 90px;
+                    padding: 6px 0 7px;
+                }
+                @include mq('desktop') {
+                    width: 110px;
+                    padding: 9px 0;
+                }
+            }
+        }
+        .captcha_img {
+            img {
+                margin: 5px 10px 0 0;
+                @include mq('tablet') {
+                    margin: 0 10px;
+                }
+            }
+        }
+        .refresh {
+            font-size: 0.875rem;
+            letter-spacing: -0.28px;
+            @include mq('desktop') {
+                font-size: 1rem;
+                letter-spacing: -0.32px;
+            }
+        }
+        .desc {
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: .875rem;
+            font-weight: 300;
+            color: $w-999;
+            @include mq('desktop') {
+                font-size: 16px;
+            }
+        }
+    }
+    &__caption {
+        float: right;
+        padding-bottom: 15px;
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: $w-333;
+        @include mq('desktop') {
+            padding-bottom: 30px;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,286 @@
+//brick-item
+.brick-item {
+    padding: 40px 15px;
+    @include mq('tablet') {
+        padding: 50px 15px;
+    }
+    @include mq('desktop') {
+        padding: 70px 10px;
+    }
+    &__subcopy {
+        margin-bottom: 5px;
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: $w-666;
+        text-align: center;
+        @include mq('tablet') {
+            font-size: 1rem;
+        }
+        @include mq('desktop') {
+            font-size: 1.125rem;
+        }
+    }
+    header {
+        margin-bottom: 10px;
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.3;
+        @include mq('tablet') {
+            font-size: 1.875rem;
+            letter-spacing: -1px;
+        }
+        @include mq('desktop') {
+            margin-bottom: 15px;
+            font-size: 40px;
+            letter-spacing: -1.4px;
+        }
+    }
+    &__detail {
+        display: none;
+
+        @include mq('tablet') {
+            display: block;
+            font-weight: 300;
+            color: $w-666;
+            text-align: center;
+            letter-spacing: -0.8px;
+        }
+    }
+    &-list {
+        font-size: 0;
+        @include clearfix;
+        &.two { //tablet이상 2개
+            .brick-item-line {
+                @include mq('tablet') {
+                    width: 49.2%;
+                    &:nth-of-type(odd) {margin-left: 0;}
+                }
+            }
+        }
+        &.three { //tablet이상 3개
+            .brick-item-line {
+                @include mq('tablet') {
+                    width: 32.26%;
+                    &:nth-of-type(3n + 1) {margin-left: 0;}
+                }
+            }
+        }
+        &.four { //tablet 2개 desktop 4개
+            .brick-item-line {
+                @include mq('tablet') {
+                    width: 49.2%;
+                    &:nth-of-type(odd) {margin-left: 0;}
+                }
+                @include mq('desktop') {
+                    width: 23.8%;
+                    &:nth-of-type(4n + 1) {margin-left: 0;}
+                }
+            }
+        }
+    }
+    &-line {
+        padding-top: 20px;
+        font-size: .875rem;
+        font-weight: 300;
+        color: $w-666;
+        word-break: keep-all;
+        word-wrap: break-word;
+        vertical-align: top;
+        a,
+        a:link {
+            font-weight: 300;
+            color: $w-666;
+            .brick-item__title:hover {
+                text-decoration: underline;
+            }
+        }
+        @include mq('tablet') {
+            display: inline-block;
+            margin-left: 1.6%;
+            &:first-child {margin-left: 0;}
+            padding-top: 30px;
+        }
+        @include mq('desktop') {
+            font-size: 16px;
+            padding-top: 35px;
+        }
+    }
+    &__title {
+        padding-bottom: 5px;
+        font-size: .938rem;
+        font-weight: 400;
+        color: $w-333;
+        @include mq('tablet') {
+            padding-bottom: 10px;
+            font-size: 1rem;
+        }
+        @include mq('desktop') {
+            font-size: 18px;
+        }
+        .fal {margin-left: 5px;}
+    }
+    &.bp_2_3 {
+        .brick-item-list > li {
+            @include mq('tablet') {
+                width: 49.2%;
+                &:nth-of-type(odd) {margin-left: 0;}
+            }
+            @include mq('desktop') {
+                width: 32.26%;
+                &:nth-of-type(odd) {margin-left: 1.6%;}
+                &:nth-of-type(3n + 1) {margin-left: 0;}
+            }
+        }
+    }
+    &.bp_3_3 {
+        .brick-item-list > li {
+            @include mq('tablet') {
+                width: 32.26%;
+                &:nth-of-type(3n + 1) {margin-left: 0;}
+            }
+        }
+    }
+    &.icon--is {
+        .brick-item-line {
+            padding-left: 50px;
+            background-repeat: no-repeat;
+            background-position: 0 20px;
+            background-size: 36px;
+            @include mq('tablet') {
+                padding-right: 20px;
+                padding-left: 70px;
+                background-position: 0 30px;
+                background-size: 54px;
+            }
+            @include mq('desktop') {
+                min-height: 110px;
+                padding-right: 54px;
+                padding-left: 98px;
+                background-size: 72px;
+            }
+        }
+
+        // tablet 이상 해상도에서 아이콘이 있으면서, 가운데 정렬일 경우
+        .is-ailgn-center {
+            @include mq('tablet') {
+                text-align: center;
+            }
+
+            .brick-item-line {
+                @include mq('tablet') {
+                    padding-top: 114px;
+                    padding-right: 0;
+                    padding-left: 0;
+                    background-position: center 40px;
+                    background-size: 54px;
+                }
+
+                @include mq('desktop') {
+                    padding-top: 142px;
+                    background-position: center 50px;
+                    background-size: 72px;
+                }
+            }
+        }
+    }
+    &.icon--isTop {
+        .brick-item-list > li {//Basic - item 2-3-6
+            display: inline-block;
+            margin-top: 20px;
+            padding-top: 46px;
+            padding-left: 0;
+            background-repeat: no-repeat;
+            background-position: center 0;
+            text-align: center;
+            @include mq('tablet', max) {
+                width: 48.5%;
+                margin-left: 3%;
+                &:nth-of-type(odd) {margin-left: 0;}
+                background-size: 36px;
+            }
+            @include mq('tablet') {
+                width: 32.26%;
+                margin-top: 30px;
+                margin-left: 1.6%;
+                padding-top: 69px;
+                background-size: 54px;
+                &:first-child {margin-left: 0;}
+            }
+            @include mq('desktop') {
+                width: 15.33%;
+                margin-top: 35px;
+                padding-top: 92px;
+                background-size: 72px;
+            }
+        }
+        &.bp_3_5 {
+            .brick-item-list > li {
+                @include mq('tablet') {
+                    &:nth-of-type(3n + 1) {margin-left: 0;}
+                }
+                @include mq('desktop') {
+                    width: 18.72%;
+                    &:nth-of-type(3n + 1) {margin-left: 1.6%;}
+                    &:first-child {margin-left: 0;}
+                }
+            }
+        }
+        &.bp_3_3 {
+            .brick-item-list > li {
+                @include mq('tablet') {
+                    width: 32.26%;
+                    &:nth-of-type(3n + 1) {margin-left: 0;}
+                }
+            }
+        }
+        &.bp_3_4 {
+            .brick-item-list > li {
+                @include mq('tablet') {
+                    width: 32.26%;
+                    &:nth-of-type(odd) {margin-left: 1.6%;}
+                    &:nth-of-type(3n + 1) {margin-left: 0;}
+                }
+                @include mq('desktop') {
+                    width: 23.8%;
+                    &:nth-of-type(3n + 1) {margin-left: 1.6%;}
+                    &:nth-of-type(4n + 1) {margin-left: 0;}
+                }
+            }
+        }
+        &.bp_2_4 {
+            .brick-item-list > li {
+                @include mq('tablet') {
+                    width: 49.2%;
+                    &:nth-of-type(odd) {margin-left: 0;}
+                }
+                @include mq('desktop') {
+                    width: 23.8%;
+                    &:nth-of-type(odd) {margin-left: 1.6%;}
+                    &:nth-of-type(4n + 1) {margin-left: 0;}
+                }
+            }
+        }
+		@include mq('tablet') {
+            .brick-item-list.case--2 li {// item 3
+                width: 49.2%;
+                &:nth-of-type(2n + 1) {margin-left: 0;}
+            }
+        }
+        @include mq('tablet') {
+            .brick-item-list.case--3 li {// item 3
+                width: 32.26%;
+                &:nth-of-type(3n + 1) {margin-left: 0;}
+            }
+        }
+        @include mq('desktop') {
+            .brick-item-list.case--4 li {// item 4
+                width: 23.8%;
+                &:nth-of-type(4n + 1) {margin-left: 0;}
+            }
+        }
+    }
+    &.top-border {
+        border-top: 1px solid $w-f3;
+    }
+}

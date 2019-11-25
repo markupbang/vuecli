@@ -1,55 +1,11 @@
 @charset "utf-8";
 
-//base
-@import "base/variables";
-@import "base/reset";
-
-//mixins
-@import "mixins/breakpoints";
-@import "mixins/clearfix";
-// @import "mixins/button";
-// @import "mixins/truncate";
-// @import "mixins/formStatusStyle";
-// @import "mixins/Table";
-
-//layout
-
-//helper
-// @import "helper/float";
-// @import "helper/clearfix";
-// @import "helper/display";
-// @import "helper/align";
-// @import "helper/sizing";
-// @import "helper/text";
-// @import "helper/spaceGenerator";
-// @import "helper/cursor";
-// @import "helper/position";
-// @import "helper/list";
-// @import "helper/print";
-// @import "helper/flex";
-
-//component
-// @import "component/button";
-// @import "component/checkbox";
-// @import "component/radio";
-// @import "component/dialog";
-// @import "component/message";
-// @import "component/tab";
-// @import "component/input";
-// @import "component/tag";
-// @import "component/select";
-// @import "component/tooltip";
-// @import "component/dropdown";
-// @import "component/icon";
-// @import "component/context";
-// @import "component/popover";
-// @import "component/tab";
-// @import "component/table";
-// @import "component/log";
-// @import "component/addressbook";
-// @import "component/file";
-
 // bricks
 @import "bricks/about";
+@import "bricks/addition";
+@import "bricks/subheader";
+@import "bricks/notice";
 
-//vendor
+// helper
+@import "helper/helper"
+

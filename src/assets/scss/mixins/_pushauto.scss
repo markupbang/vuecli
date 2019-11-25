@@ -1,0 +1,8 @@
+// push--auto / margin: 0 auto 믹스인
+
+@mixin push--auto {
+    margin: {
+        right: auto;
+        left: auto;
+    }
+}

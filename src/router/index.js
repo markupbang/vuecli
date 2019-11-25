@@ -21,17 +21,13 @@ const routes = [
   {
     path: '/brick',
     name: 'Brick',
-    component: () => import('../views/Brick.vue')
-  },
-  {
-    path: '/components/About',
-    name: 'About',
-    component: () => import('@/components/About.vue')
-  },
-  {
-    path: '/components/Subheader',
-    name: 'Subheader',
-    component: () => import('@/components/Subheader.vue')
+    component: () => import('../views/Brick.vue'),
+    children: [
+      { path: 'about', component: () => import('@/components/About.vue')},
+      { path: 'addition', component: () => import('@/components/Addition.vue')},
+      { path: 'subheader', component: () => import('@/components/Subheader.vue')},
+      { path: 'notice', component: () => import('@/components/Notice.vue')}
+    ]
   }
 ]
 

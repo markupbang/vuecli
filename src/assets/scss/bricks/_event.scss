@@ -1,0 +1,224 @@
+//brick-event
+.brick-event {
+    background-color: $w-eve-black;
+    font-size: 14px;
+    @include mq('desktop') {
+        font-size: 16px;
+    }
+    &.two {
+        li {
+            height: auto;
+            padding: 20px 25px 7px;
+            text-align: left;
+            @include mq('tablet') {
+                display: inline-block;
+                width: 50%;
+                padding: 20px;
+            }
+            @include mq('desktop') {
+                padding: 28px 0;
+            }
+            .brick-event__title {
+                @include mq('tablet') {
+                    display: inline-block;
+                    text-align: center;
+                }
+                @include mq('desktop') {
+                    display: block;
+                    max-width: 590px;
+                    margin: 0 0 0 auto;
+                }
+            }
+            &:last-child {
+                padding: 7px 25px 20px;
+                @include mq('tablet') {
+                    padding: 20px;
+                }
+                @include mq('desktop') {
+                    padding: 28px 0;
+                }
+                .brick-event__title {
+                    @include mq('desktop') {
+                        display: block;
+                        max-width: 590px;
+                        margin: 0 auto 0 0;
+                    }
+                }
+            }
+        }
+    }
+    &.three {
+        li {
+            @include mq('tablet') {
+                width: 33.3%;
+            }
+        }
+    }
+    li {
+        height: 60px;
+        padding: 20px;
+        text-align: left;
+        @include mq('tablet') {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        @include mq('desktop') {
+            height: 80px;
+            padding: 28px;
+        }
+        &:hover {
+            @include mq('desktop') {
+                background-color: $w-eve-black-d;
+                .brick-event__desc {
+                    color: $w-orange;
+                    .brick-event__badge {
+                        color: $w-white;
+                    }
+                }
+            }
+        }
+    }
+    .brick-event__desc {
+        color: $w-white;
+        cursor: pointer;
+        .brick-event__badge {
+            display: inline-block;
+            width: 50px;
+            margin-right: 15px;
+            border-radius: 2px;
+            background-color: $w-orange;
+            text-align: center;
+            @include mq('desktop') {
+                width: 60px;
+            }
+        }
+        i.fal {margin-left: 10px;}
+        .mobile-text-hide {
+            display: none;
+            @include mq('tablet') {
+                display: inline-block;
+            }
+        }
+    }
+    &.domain {
+        @include clearfix;
+        position: relative;
+        display: table;
+        width: 100%;
+        padding: 12px 0;
+        @include mq('tablet') {
+            display: inline-block;
+            padding: 0;
+        }
+        .badge-wrap {
+            display: table-cell;
+            @include mq('tablet') {
+                display: inline;
+            }
+        }
+        .brick-event__badge {
+            display: inline-block;
+            width: 50px;
+            margin-left: 15px;
+            border-radius: 2px;
+            background-color: $w-orange;
+            color: $w-white;
+            text-align: center;
+            @include mq('tablet') {
+                float: left;
+                margin-top: 20px;
+            }
+            @include mq('desktop') {
+                width: 60px;
+                margin-top: 28px;
+                margin-left: 15px;
+            }
+            @include mq('desktop-wide') {
+                margin-left: 0;
+            }
+        }
+
+        ul {
+            display: table-cell;
+            @include mq('tablet') {
+                @include clearfix;
+                display: block;
+                float: left;
+                width: calc(100% - 141px);
+            }
+            @include mq('desktop') {
+                width: calc(100% - 149px);
+            }
+
+            @include mq('desktop-wide') {
+                width: calc(100% - 119px);
+            }
+            li {
+                display: inline-block;
+                height: auto;
+                padding: 8px 0;
+                &:not(:first-child) {
+                    .brick-event__desc {
+                        border-left: 1px solid #898d95;
+                        line-height: 1;
+                    }
+                }
+                @include mq('tablet') {
+                    float: left;
+                    height: 60px;
+                    padding: 20px 0;
+                    &:not(:first-child) {
+                        width: 22%;
+                    }
+                    &:first-child {
+                        width: 32%;
+                    }
+                }
+                @include mq('desktop') {
+                    height: 80px;
+                    padding: 28px 0;
+                    &:not(:first-child) {
+                        .brick-event__desc {
+                            border-left: 1px solid #898d95;
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+        }
+        .brick-event__desc {
+            display: inline-block;
+            padding: 0 15px;
+            font-weight: 300;
+            @include mq('tablet') {
+                width: 100%;
+                padding: 0;
+            }
+        }
+        .go-more {
+            position: absolute;
+            right: 15px;
+            bottom: 20px;
+            display: inline-block;
+            a {
+                color: $w-yellow;
+            }
+            @include mq('tablet') {
+                position: static;
+                float: left;
+                padding-top: 20px;
+            }
+            @include mq('desktop') {
+                margin-right: 15px;
+                padding-top: 28px;
+            }
+            @include mq('desktop-wide') {
+                margin-right: 0;
+            }
+            .fa-chevron-right {
+                margin-left: 8px;
+            }
+        }
+    }
+}

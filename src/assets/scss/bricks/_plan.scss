@@ -1,0 +1,707 @@
+// brick-plan
+
+.brick-plan {
+    position: relative;
+    padding: 30px 15px 40px;
+    background: $w-steel-gray;
+    @include clearfix;
+    @include mq('tablet', max) {
+        .swiper-wrapper .brick-plan-prod {
+            width: calc(100% - 8px);
+            margin: 0 auto 10px;
+        }
+    }
+    @include mq('tablet') {
+        padding: 38px 15px 50px;
+    }
+    &__type {
+        .title {
+            margin-bottom: 5px;
+            font-size: 1.25rem;
+            @include mq('tablet') {
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            @include mq('desktop') {
+                font-size: 2rem;
+            }
+        }
+        .desc {
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: $w-666;
+            @include mq('desktop') {
+                font-size: 1rem;
+            }
+        }
+    }
+    .plan__nav {
+        @include mq('tablet') {
+            display: none;
+        }
+        select {
+            height: 34px;
+            margin-bottom: 28px;
+            padding-left: 10px;
+            // padding: .8em .5em;
+            border: 0;
+            border-radius: 0;
+            font-size: .875rem;
+            line-height: 34px;
+            @include box-shadow(0, 0, 3px, rgba(0, 0, 0, 0.1));
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // appearance: none;
+            // &::-ms-expand {
+            //     display: none;
+            // }
+        }
+    }
+    .brick-plan-prod {
+        position: relative;
+        width: 100%;
+        margin-top: 10px;
+        padding: 30px 20px;
+        border: 1px solid $w-steel-gray;
+        border-radius: 6px;
+        background: $w-white;
+        @include box-shadow(0, 0, 4px, rgba(0, 0, 0, 0.1));
+        @include mq('tablet') {
+            float: left;
+            padding: 40px 20px;
+            .prod__header {
+                margin-bottom: 30px;
+            }
+        }
+        @include mq('desktop') {
+            top: 0;
+            margin-top: 12px;
+            padding: 50px 30px;
+            transition: top .3s;
+            // transition: transform .3s;
+            &:hover {
+                top: -10px;
+                @include box-shadow(0, 10px, 8px, rgba(0, 0, 0, 0.1));
+                // animation-name: myAnimation;
+                // animation-duration: .3s;
+                // transform: translate(0, -10px);
+                // @keyframes myAnimation {
+                //     0% {top: 0;}
+                //     100% {top: -10px;}
+                // }
+            }
+        }
+        &.one-pd {
+            @include mq('tablet') {
+                padding: 40px 50px;
+            }
+            @include mq('desktop') {
+                padding: 50px;
+            }
+        }
+
+        &.empty {
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
+            @include mq('tablet') {
+                background: $w-white;
+                opacity: 0.6;
+            }
+        }
+        .badge {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            display: inline-block;
+            padding: 3px 6px;
+            border-radius: 6px 0 0;
+            font-size: .750rem;
+            color: $w-white;
+            @include mq('tablet') {
+                padding: 5px 10px;
+                font-size: .875rem;
+            }
+            &.blue {
+                background: $w-badge-blue;
+            }
+            &.orange {
+                background: $w-orange;
+            }
+            &.deeporange {
+                background: #ff6f00;
+            }
+        }
+        &.badge-new {
+            border: 1px solid $w-badge-blue;
+            &::before {
+                @include pseudo;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                padding: 3px 6px;
+                background: $w-badge-blue;
+                font-size: .750rem;
+                color: $w-white;
+                content: 'NEW';
+            }
+            @include mq('tablet') {
+                &::before {
+                    padding: 5px 10px;
+                    font-size: .875rem;
+                }
+            }
+        }
+        &.badge-best {
+            border: 1px solid $w-orange;
+            &::before {
+                @include pseudo;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                padding: 3px 6px;
+                background: $w-orange;
+                font-size: 14px;
+                color: $w-white;
+                content: 'BEST';
+            }
+            @include mq('tablet') {
+                &::before {
+                    padding: 5px 10px;
+                    font-size: .875rem;
+                }
+            }
+        }
+        > table {
+            clear: both;
+        }
+        .prod__header {
+            float: left;
+            @include mq('tablet', max) {
+                &.mb-block {float: none;}
+            }
+        }
+        .prod__btn {
+            float: right;
+            @include mq('tablet', max) {
+                margin-top: 10px;
+                &.mb-block {
+                    float: none;
+                }
+            }
+            .btn-basic-blue {
+                float: none;
+                @include mq('tablet') {
+                    float: right;
+                }
+            }
+        }
+        .btn-basic-blue {
+            float: right;
+            border-radius: 4px;
+            @include mq('tablet') {
+                width: 110px;
+            }
+            @include mq('desktop') {
+                float: none;
+                width: 140px;
+                padding: 12px 0;
+            }
+            @include mq('desktop-wide') {
+                float: right;
+            }
+            &.width--auto {
+                width: auto;
+            }
+        }
+        .brick-plan-prod__name {
+            @include mq('tablet') {
+                margin-bottom: 5px;
+                font-size: 1.125rem;
+            }
+            @include mq('desktop') {
+                font-size: 1.375rem;
+            }
+
+            .name {
+                font-size: 1.500rem;
+                @include mq('tablet') {
+                    font-size: 1.750rem;
+                }
+                @include mq('desktop') {
+                    font-size: 2rem;
+                }
+            }
+        }
+        .brick-plan-prod__cost {
+            display: inline-block;
+            .cost {
+                font-size: 1.500rem;//24px
+                font-weight: bold;
+            }
+            @include mq('tablet') {
+                margin-bottom: 0;
+                .cost {
+                    font-size: 1.750rem;
+                    font-weight: bold;
+                }//28px
+            }
+            @include mq('desktop') {
+                display: block;
+                .cost {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }//32px
+            }
+            @include mq('desktop-wide') {
+                display: inline-block;
+            }
+            .won {
+                font-size: 0.8125rem;
+                font-weight: 400;
+                color: $w-b7;
+                .br {
+                    display: block;
+                    vertical-align: top;
+                    @include mq('desktop') {
+                        display: none;
+                    }
+                    &.empty {
+                        display: none;
+                        @include mq('tablet') {
+                            display: block;
+                        }
+                        @include mq('desktop') {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        &__checklist {
+            margin-top: 20px;
+            li {
+                margin-bottom: 5px;
+            }
+            .check {
+                font-size: 0.875rem;
+                i {
+                    display: inline-block;
+                    width: 30px;
+                    font-size: 1rem;
+                    color: $w-btn-blue;
+                }
+            }
+            .no {
+                font-size: 0.875rem;
+                color: $w-ccc;
+                i {
+                    display: inline-block;
+                    width: 30px;
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__target {
+            .title {
+                display: inline-block;
+                margin-right: 10px;
+                font-size: 0.8125rem;
+                color: $w-999;
+                vertical-align: top;
+            }
+            .desc {
+                display: inline-block;
+                width: 65%;
+                font-size: 0.875rem;
+                color: $w-btn-blue;
+            }
+        }
+        .consult-phone {
+            margin-top: 5px;
+            color: $w-orange;
+            text-align: right;
+            @include mq('desktop') {
+            margin-top: 10px;
+            }
+        }
+        .table__title {
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+        .brick-plan-prod__table {
+            margin-top: 20px;
+            @include mq('tablet') {
+                margin-top: 30px;
+            }
+            @include mq('desktop') {
+            margin-top: 40px;
+            }
+            &.is-center {
+                margin-top: 20px;
+                @include mq('tablet') {
+                    margin-top: 0;
+                }
+            }
+            th {
+                padding: 6px 10px 0 0;
+                font-size: 0.8125rem;
+                font-weight: 400;
+                color: $w-999;
+                text-align: left;
+                vertical-align: top;
+                white-space: nowrap;
+                @include mq('tablet') {
+                    padding-top: 9px;
+                }
+                @include mq('desktop') {
+                    padding-top: 12px;
+                    font-size: 0.875rem;
+                }
+            }
+            td {
+                padding: 5px 0 0;
+                font-size: 0.875rem;
+                vertical-align: top;
+                @include mq('tablet') {
+                    padding-top: 8px;
+                }
+                @include mq('desktop') {
+                    padding-top: 10px;
+                    font-size: 1rem;
+                }
+                .bar {
+                    display: none;
+                    width: 1px;
+                    height: 16px;
+                    margin: -1px 5px 0;
+                    background: $w-999;
+                    vertical-align: middle;
+                    @include mq('tablet') {
+                        display: inline-block;
+                    }
+                }
+            }
+            tr:first-child th,
+            tr:first-child td {
+                padding-top: 0;
+            }
+            tr:first-child th {
+                position: relative;
+                top: 2px;
+            }
+        }
+        .prod__cost > .w-list {
+            clear: both;
+            padding-top: 20px;
+            font-size: .875rem;
+            @include mq('tablet') {
+                padding-top: 0;
+            }
+            @include mq('desktop') {
+                font-size: 1rem;
+            }
+
+        }
+        .expand-btn-open,
+        .expand-btn-close {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background: #f9fafc;
+            font-size: 18px;
+            text-align: center;
+            &.hide {
+                display: none;
+            }
+            @include mq('tablet') {
+            display: none !important;
+            }
+        }
+    }
+
+    &.conts--column__two {
+        .brick-plan-prod__name {
+            float: left;
+            font-size: 1.5rem;
+            @include mq('tablet') {
+                font-size: 1.750rem;
+            }
+            @include mq('desktop') {
+                font-size: 2rem;
+            }
+        }
+        .btn-basic-blue {
+            float: right;
+        }
+        .brick-plan-prod__table {
+            @include mq('tablet') {
+                float: left;
+                width: 50%;
+                font-size: 1.750rem;
+            }
+            @include mq('desktop') {
+                font-size: 2rem;
+            }
+            caption {
+                width: auto;
+                height: auto;
+                overflow: inherit;
+                font-size: .813rem;
+                line-height: inherit;
+                text-align: left;
+                visibility: inherit;
+                @include mq('tablet') {
+                    font-size: .875rem;
+                }
+            }
+            tr:first-child th,
+            tr:first-child td {
+                padding-top: 5px;
+                @include mq('tablet') {
+                    padding-top: 8px;
+                }
+                @include mq('desktop') {
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+    &-bottom {
+        display: inline-block;
+        padding-top: 20px;
+        @include mq('desktop') {
+            padding-top: 30px;
+        }
+        &-text {
+            > li {
+                font-size: .875rem;
+                color: $w-666;
+                @include mq('desktop') {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &.one {
+        position: relative;
+        @include mq('tablet') {
+            .brick-plan-prod {padding: 40px 50px;}
+            .prod__header {
+                margin-right: 50px;
+            }
+        }
+        @include mq('desktop') {
+            .brick-plan-prod {padding: 50px;}
+            .brick-plan-prod__cost {display: inline-block;}
+            .prod__cost {
+                float: left;
+            }
+        }
+    }
+    &.two {
+        .brick-plan-prod {
+            @include mq('tablet') {
+                width: 49.2%;
+                margin-left: 1.6%;
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+            }
+            @include mq('desktop') {
+                padding: 50px 40px;
+            }
+            // @include mq('tablet') {
+            //     width: calc(50% - 12px);
+            //     margin-right: 12px;
+            //     &:nth-of-type(2n) {
+            //         margin-right: 0;
+            //     }
+            //
+            // }
+            // @include mq('desktop') {
+            //     width: calc(50% - 10px);
+            //     margin-right: 10px;
+            //     padding: 50px 40px;
+            //     &:nth-of-type(2n) {
+            //         margin-right: 10px;
+            //     }
+            //     &:last-child {
+            //         margin-right: 0;
+            //     }
+            // }
+            .brick-plan-prod__cost {
+                display: inline-block;
+            }
+            .btn-basic-blue {
+                float: right;
+            }
+        }
+    }
+    &.three {
+        .brick-plan-prod {
+            @include mq('tablet') {
+                width: 49.2%;
+                margin-left: 1.6%;
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+            }
+            @include mq('desktop') {
+                width: 32.26%;
+                // padding: 50px 30px;
+                &:nth-of-type(odd) {
+                    margin-left: 1.6%;
+                }
+                &:nth-of-type(3n - 2) {
+                    margin-left: 0;
+                }
+                .btn-basic-blue {
+                    margin-top: 20px;
+                }
+            }
+            @include mq('desktop-wide') {
+                .brick-plan-prod__name.longer {
+                    display: block;
+                    margin-bottom: 23px;
+                }
+                .btn-basic-blue {
+                    margin-top: 0;
+                }
+            }
+            // @include mq('tablet') {
+            //     width: calc(50% - 6px);
+            //     margin-right: 6px;
+            //     &:nth-of-type(2n) {
+            //         margin-right: 0;
+            //     }
+            // }
+            // @include mq('desktop') {
+            //     width: calc(33.3% - 11px);
+            //     margin-right: 11px;
+            //     &:nth-of-type(2n) {
+            //         margin-right: 11px;
+            //     }
+            //     padding: 50px 30px;
+            //     &:nth-of-type(3n) {
+            //         margin-right: 0;
+            //     }
+            // }
+            // @include mq('desktop-wide') {
+            //     .brick-plan-prod__name.longer {
+            //         display: block;
+            //         margin-bottom: 23px;
+            //     }
+            // }
+        }
+    }
+    &.four {
+        .brick-plan-prod {
+            @include mq('tablet') {
+                width: 49.2%;
+                margin-left: 1.6%;
+            }
+            @include mq('desktop', max) {
+                &:nth-of-type(odd) {
+                    margin-left: 0;
+                }
+            }
+            @include mq('desktop') {
+                width: 23.8%;
+                &:first-child {
+                    margin-left: 0;
+                }
+                .btn-basic-blue {
+                    float: none;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    &.vertical {
+        @include mq('tablet') {
+            .brick-plan-prod {
+                display: table;
+                padding: 40px 30px;
+                .prod__header {
+                    display: table-cell;
+                    vertical-align: middle;
+                    .brick-plan-prod__cost {
+                        display: block;
+                    }
+                    .btn-basic-blue {
+                        float: none;
+                        margin-top: 10px;
+                    }
+                }
+                .brick-plan-prod__table {
+                    float: right;
+                }
+            }
+        }
+        @include mq('desktop') {
+            .brick-plan-prod {
+                float: none;
+                padding: 40px 50px;
+                .prod__header {
+                    width: 400px;
+                    .brick-plan-prod__cost {
+                        display: inline-block;
+                    }
+                    .btn-basic-blue {
+                        float: right;
+                        margin: -10px 20px 0 0;
+                    }
+                }
+            }
+        }
+    }
+    .detail-link-m {
+        clear: both;
+        margin: 20px 0 30px;
+        font-size: 0.875rem;
+        text-align: center;
+        a {
+            cursor: pointer;
+        }
+        @include mq('desktop') {
+            display: none;
+        }
+    }
+    .btn--detail-view {
+        margin-top: 20px;
+        @include mq('tablet') {
+            margin-top: 30px;
+        }
+        @include mq('desktop') {
+            margin-top: 40px;
+        }
+    }
+    .w-list {
+        &.dot {
+            > li {
+                &::before {
+                    width: 10px;
+                    @include mq('desktop') {
+                        width: 12px;
+                    }
+                }
+            }
+            &.is-title {
+                margin-top: -3px;
+                > li {
+                    + li {padding: 2px 0 0;}
+                }
+            }
+        }
+    }
+    .brick-plan-head {
+        padding-bottom: 6px;
+        vertical-align: bottom;
+        .gt-nav-item {line-height: 42px;}
+    }
+}

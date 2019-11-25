@@ -1,0 +1,204 @@
+// brick-notice
+
+.brick-noticewrap {
+	@include clearfix;
+
+	margin-bottom: 30px;
+	@include mq("tablet") {
+		margin-bottom: 40px;
+	}
+	@include mq("desktop") {
+		margin-bottom: 70px;
+		padding: 0 10px;
+	}
+}
+.brick-notice {
+	padding: 8px 10px 20px;
+
+	header {
+		display: inline-block;
+		padding-left: 5px;
+		font-size: 1.125rem;
+
+		@include mq("tablet") {
+			font-size: 1.5rem;
+		}
+
+		@include mq("desktop") {
+			font-size: 34px;
+			padding-left: 0;
+		}
+
+		& + a {
+			margin-left: 10px;
+			font-size: 0.75rem;
+			font-weight: 300;
+			color: $w-666;
+
+			@include mq("desktop") {
+				margin-left: 20px;
+				font-size: 16px;
+			}
+			.fal {margin-left: 5px;}
+		}
+	}
+
+	ul {
+		margin-top: 10px;
+		border-top: 2px solid #6f6f6f;
+	}
+
+	&__items {
+		padding: 10px;
+		border-bottom: 1px solid #e5e5e5;
+
+		@include mq("tablet") {
+			padding: 15px 10px;
+		}
+
+		@include mq("desktop") {
+			padding: 20px 10px;
+		}
+
+		@include clearfix;
+
+		a {
+			font-size: 0.875rem;
+			font-weight: 300;
+
+			@include mq("tablet") {
+				float: left;
+			}
+
+			@include mq("desktop") {
+				font-size: 16px;
+			}
+		}
+
+	}
+
+	&__time {
+		margin-top: 2px;
+		font-size: 0.75rem;
+		font-weight: 300;
+		color: $w-999;
+
+		@include mq("tablet") {
+			float: right;
+		}
+
+		@include mq("desktop") {
+			font-size: 16px;
+		}
+	}
+
+	@include mq("tablet") {
+		float: left;
+		width: calc(66.6666667% - 12px);
+		margin: 0 6px;
+		padding: 0 0 20px 9px;
+	}
+
+	@include mq("desktop") {
+		float: left;
+		width: calc(66.6666667% - 7px);
+		margin: 0;
+		padding: 0;
+	}
+}
+
+// nameserver
+.brick-nameserver {
+
+	header {
+		padding-left: 5px;
+		font-size: 1.125rem;
+
+		@include mq("tablet") {
+			font-size: 1.5rem;
+		}
+
+		@include mq("desktop") {
+			padding-left: 0;
+			font-size: 34px;
+		}
+	}
+
+	ul {
+		margin-top: 10px;
+		padding: 15px 10px;
+		border-top: 2px solid #6f6f6f;
+		border-bottom: 1px solid #e5e5e5;
+
+		@include mq("tablet") {
+			padding: 16px 9px 15px;
+		}
+
+		@include mq("desktop") {
+			padding: 33px 0 35px;
+		}
+	}
+
+	&__items {
+		font-size: 0.875rem;
+		font-weight: 300;
+
+		@include mq("tablet") {
+			.block-tablet {
+				padding-left: 42px;
+			}
+		}
+
+		@include mq("desktop") {
+			font-size: 16px;
+			padding-left: 20px;
+			.block-tablet {
+				display: inline-block;
+				padding: 0;
+			}
+		}
+
+		&:not(:first-child) {
+			margin-top: 12px;
+
+			@include mq("tablet") {
+				margin-top: 8px;
+
+			}
+
+			@include mq("desktop") {
+				margin-top: 29px;
+
+			}
+		}
+	}
+
+	&__label {
+		display: inline-block;
+		margin-right: 10px;
+		padding: 1px 5px 0;
+		background: $w-666;
+		border-radius: 2px;
+		font-size: 0.875rem;
+		font-weight: 300;
+		color: $w-white;
+
+		@include mq("desktop") {
+			font-size: 16px;
+		}
+	}
+
+	@include mq("tablet") {
+		margin: 0 6px;
+		padding-left: 0;
+		float: right;
+		width: calc(33.3333333% - 12px);
+	}
+
+	@include mq("desktop") {
+		margin: 0;
+		padding-right: 0;
+		float: right;
+		width: calc(33.3333333% - 14px);
+	}
+}

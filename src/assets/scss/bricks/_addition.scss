@@ -1,0 +1,214 @@
+// bricks addition
+.brick-addition {
+    padding: 40px 15px;
+    background: $w-br-blue; // Old browsers
+    background: -moz-linear-gradient(
+        top,
+        $w-br-blue 0%,
+        $w-br-blue-light 100%
+    ); // FF3.6-15
+    background: -webkit-linear-gradient(
+        top,
+        $w-br-blue 0%,
+        $w-br-blue-light 100%
+    ); // Chrome10-25,Safari5.1-6
+    background: linear-gradient(
+        to bottom,
+        $w-br-blue 0%,
+        $w-br-blue-light 100%
+    ); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    background: #1a6fb7; // Old browsers
+    background: -moz-linear-gradient(
+        top,
+        #1a6fb7 0%,
+        #2c8bcb 100%
+    ); // FF3.6-15
+    background: -webkit-linear-gradient(
+        top,
+        #1a6fb7 0%,
+        #2c8bcb 100%
+    ); // Chrome10-25,Safari5.1-6
+    background: linear-gradient(
+        to bottom,
+        #1a6fb7 0%,
+        #2c8bcb 100%
+    ); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+    color: $w-white;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1a6fb7', endColorstr='#2c8bcb',GradientType=0); // IE6-9
+    &.orange {
+        background: #eb8423; /* Old browsers */
+        background: -moz-linear-gradient(
+            top,
+            $w-br-orange 0%,
+            $w-br-orange-light 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+            top,
+            $w-br-orange 0%,
+            $w-br-orange-light 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: -ms-linear-gradient(
+            top,
+            $w-br-orange 0%,
+            $w-br-orange-light 100%
+        );
+        background: linear-gradient(
+            to bottom,
+            $w-br-orange 0%,
+            $w-br-orange-light 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        background: #eb8423; /* Old browsers */
+        background: -moz-linear-gradient(
+            top,
+            #e57726 0%,
+            #e7882a 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+            top,
+            #e57726 0%,
+            #e7882a 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        background: -ms-linear-gradient(
+            top,
+            #e57726 0%,
+            #e7882a 100%
+        );
+        background: linear-gradient(
+            to bottom,
+            #e57726 0%,
+            #e7882a 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        color: $w-white;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e57726', endColorstr='#e7882a',GradientType=0); /* IE6-9 */
+
+        .brick-addition__items {
+            li {
+                background-color: #eb892d;
+
+                a {
+                    color: #fff7e3;
+                }
+            }
+        }
+    }
+    @include clearfix;
+    @include mq('tablet') {
+        padding: 50px 15px;
+    }
+    @include mq('desktop') {
+        padding: 70px 10px;
+    }
+    header {
+        margin-bottom: 30px;
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 1.3;
+        text-align: center;
+        @include mq('tablet') {
+            font-size: 1.875rem; //30px
+            letter-spacing: -1px;
+        }
+        @include mq('desktop') {
+            float: left;
+            width: 32.26%;
+            font-size: 2.5rem; //40px
+            text-align: left;
+        }
+    }
+    &__items {
+        @include mq('desktop') {
+            float: left;
+            width: 66.12%;
+            margin-left: 1.6%;
+            // width: 780px;
+            margin-top: -20px;
+        }
+        li {
+            margin-top: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: $w-br-blue-light;
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: #cdf7ff;
+            @include box-shadow(0, 1px, 5px, rgba(0, 0, 0, 0.2));
+            @include mq('tablet') {
+                float: left;
+                width: 49.2%;
+                height: 128px;
+                &:nth-child(2n) {
+                    margin-left: 1.6%;
+                }
+                &:nth-child(-n + 2) {
+                    margin-top: 0;
+                }
+            }
+            @include mq('desktop') {
+                width: 48.71%;
+                height: 168px;
+                margin-top: 20px;
+                padding: 30px;
+                font-size: 1rem;
+                &:nth-child(2n) {
+                    margin-left: 2.56%;
+                }
+                &:nth-child(-n + 2) {
+                    margin-top: 20px;
+                }
+            }
+            a {
+                font-weight: 300;
+                color: $w-d2f;
+                .brick-addition__title:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &.auto-height {
+             li {
+                height: auto;
+            }
+        }
+    }
+    &.index {
+        @include mq('desktop') {
+            header {text-align: center;}
+            header,
+            .brick-addition__items {
+                float: none;
+                width: 100%;
+                margin-top: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    &__title {
+        padding-bottom: 5px;
+        font-size: 0.938rem;
+        color: $w-white;
+        i {margin-left: 5px;}
+        @include mq('tablet') {
+            font-size: 1.125rem;
+            font-weight: 400;
+        }
+        @include mq('desktop') {
+            font-size: 1.25rem;
+            i {
+                font-size: 1rem;
+            }
+        }
+    }
+    &.is-icon {
+        .brick-addition__items li {
+            padding-right: 90px;
+            background-position: right 20px top 20px;
+            background-repeat: no-repeat;
+            @include mq('tablet') {
+                background-size: 54px;
+            }
+            @include mq('desktop') {
+                background-size: 72px;
+            }
+        }
+    }
+}
