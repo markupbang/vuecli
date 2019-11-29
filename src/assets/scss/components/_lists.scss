@@ -1,0 +1,45 @@
+// list-style
+.w-list {
+	> li {
+		text-align: left;
+		+ li {padding: 5px 0 0;}
+	}
+	&.dot {
+		//color:$w-666;
+		> li {
+			display: table;
+			width: 100%;
+			&::before {
+				display: table-cell;
+				width: 12px;
+				content: '\2022';
+				@include mq('tablet') {
+					width: 10px;
+				}
+			}
+		}
+	}
+	&.bar {
+		//color:$w-666;
+		> li {
+			display: table;
+			width: 100%;
+			&::before {
+				display: table-cell;
+				width: 15px;
+				content: '-';
+			}
+		}
+	}
+	&.decimal {
+		margin-left: 20px;
+		> li {
+			list-style: decimal;
+		}
+	}
+	&.cell {
+		display:table;
+		width:100%;
+		[class*='cell-'] {display:table-cell;}
+	}
+}

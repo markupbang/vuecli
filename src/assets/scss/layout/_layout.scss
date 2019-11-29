@@ -1,0 +1,22 @@
+// layout
+.container--pushauto {
+    @include push--auto();
+    @include mq('desktop') {
+        max-width: 1180px;
+    }
+}
+
+.contents {
+    position: relative;
+    top: 60px;
+
+    // tablet
+    @include mq('tablet') {
+        top: 70px;
+    }
+
+    // desktop
+    @include mq('desktop') {
+        top: 90px;
+    }
+}

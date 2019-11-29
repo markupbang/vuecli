@@ -1,5 +1,13 @@
 <template>
   <div class="components">
-    <h1>This is an component page</h1>
+    <h1 class="view-page-title">This is a components page</h1>
   </div>
 </template>
+
+<style lang="scss">
+.components {
+    & > h1 {
+        color:#42b983;
+    }
+}
+</style>

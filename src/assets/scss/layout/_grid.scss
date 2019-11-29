@@ -1,0 +1,60 @@
+// 191015 / .rwd-row 해상도에 따른 컨텐츠 오버플로우 현상으로 인해 마진 마이너스값 조정
+.rwd-row {
+  @include clearfix();
+  margin: 0 -.8%;
+  .rwd-col {
+    display: block;
+    float: left;
+    .box {margin: 0 .8%;}
+  }
+
+  // ~ 767
+  @include mq('tablet', max) {
+      .rwd-sm-1 {width: 8.333%;}
+      .rwd-sm-2 {width: 16.66%;}
+      .rwd-sm-3 {width: 25%;}
+      .rwd-sm-4 {width: 33.33%;}
+      .rwd-sm-5 {width: 41.66%;}
+      .rwd-sm-6 {width: 50%;}
+      .rwd-sm-7 {width: 58.33%;}
+      .rwd-sm-8 {width: 66.66%;}
+      .rwd-sm-9 {width: 75%;}
+      .rwd-sm-10 {width: 83.33%;}
+      .rwd-sm-11 {width: 91.66%;}
+      .rwd-sm-12 {width: 100%;}
+  }
+
+  // 768 ~ 1023
+  @include mq('tablet') {
+      margin: 0 -.4%;
+      .rwd-md-1 {width: 8.333%;}
+      .rwd-md-2 {width: 16.66%;}
+      .rwd-md-3 {width: 25%;}
+      .rwd-md-4 {width: 33.33%;}
+      .rwd-md-5 {width: 41.66%;}
+      .rwd-md-6 {width: 50%;}
+      .rwd-md-7 {width: 58.33%;}
+      .rwd-md-8 {width: 66.66%;}
+      .rwd-md-9 {width: 75%;}
+      .rwd-md-10 {width: 83.33%;}
+      .rwd-md-11 {width: 91.66%;}
+      .rwd-md-12 {width: 100%;}
+  }
+
+  // 1024 ~
+  @include mq('desktop') {
+      margin: 0;
+      .rwd-lg-1 {width: 8.333%;}
+      .rwd-lg-2 {width: 16.66%;}
+      .rwd-lg-3 {width: 25%;}
+      .rwd-lg-4 {width: 33.33%;}
+      .rwd-lg-5 {width: 41.66%;}
+      .rwd-lg-6 {width: 50%;}
+      .rwd-lg-7 {width: 58.33%;}
+      .rwd-lg-8 {width: 66.66%;}
+      .rwd-lg-9 {width: 75%;}
+      .rwd-lg-10 {width: 83.33%;}
+      .rwd-lg-11 {width: 91.66%;}
+      .rwd-lg-12 {width: 100%;}
+  }
+}

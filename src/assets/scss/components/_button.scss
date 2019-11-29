@@ -1,0 +1,286 @@
+// button
+%base {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 0.875rem !important;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .15s ease-in-out;
+    @include mq('tablet') {
+        padding: 8px 30px;
+        font-size: 0.875rem !important;
+    }
+    @include mq('desktop') {
+        padding: 12px 42px;
+        font-size: 1rem !important;
+    }
+    &:hover {text-decoration: none;}
+    &:focus {outline: none;}
+}
+
+.btn-basic {
+    @extend %base;
+    border-color: $w-333;
+    color: $w-333;
+    letter-spacing: -1px;
+    @include mq('tablet') {
+    }
+    @include mq('desktop') {
+    }
+    &:hover {
+        border-color: transparent;
+        background-color: $w-333;
+        color: $w-white;
+    }
+    &.big {
+        width: auto;
+        padding: 6px 27px;
+        font-size: 16px;
+        @include mq('desktop') {
+            padding: 11px 43px;
+        }
+    }
+    &.small {
+        width: auto;
+        padding: 3px 18px;
+    }
+    &.invert {
+        border-color: $w-white;
+        color: $w-white;
+        &:hover {
+            background-color: $w-white;
+            color: $w-333;
+        }
+    }
+	&.m-invert {
+		color: $w-white;
+		border-color: $w-white;
+
+		@include mq('tablet') {
+			color: $w-333;
+			border-color: $w-333;
+			&:hover {
+				color: $w-white;
+				border-color: transparent;
+			}
+		}
+	}
+    &.reverse-m-invert {
+        color: $w-333;
+        border-color: $w-333;
+        @include mq('tablet') {
+			color: $w-white;
+			border-color: $w-white;
+			&:hover {
+                background: $w-white;
+				color: $w-333;
+				border-color: $w-white;
+			}
+		}
+    }
+}
+
+.btn-basic-blue {
+    @extend %base;
+    width: 90px;
+    border-radius: 3px;
+    background-color: $w-btn-blue;
+    color: $w-white !important;
+    &.width-auto {width: auto;}
+    &.width-auto:hover {
+        width: auto;
+        @include mq('tablet') {
+			padding: 8px 30px;
+		}
+		@include mq('desktop') {
+			padding: 12px 42px;
+		}
+    }
+    &:hover {
+		background-color: $w-btn-blue-h;
+        color: $w-white;
+
+		@include mq('tablet') {
+			width: 120px;
+			padding: 8px 0;
+		}
+		@include mq('desktop') {
+			padding: 12px 0;
+		}
+	}
+    &:active {
+        background-color: $w-btn-blue-a;
+        color: $w-white;
+    }
+}
+
+.btn-basic-white {
+    @extend %base;
+    padding: 7px 30px 6px;
+    border-color: $w-white;
+    border-radius: 3px;
+    color: $w-white !important;
+    @include mq('tablet') {
+
+    }
+    @include mq('desktop') {
+    }
+}
+
+.btn-basic-form {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border: 1px solid transparent;
+    border-color: $w-666;
+    border-radius: 3px;
+    font-size: 0.750rem !important;
+    color: $w-666;
+    text-align: center;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .15s ease-in-out;
+    @include mq('desktop') {
+        padding: 4px 18px;
+        font-size: 14px !important;
+    }
+    &:hover {text-decoration: none;}
+    &:focus {outline: none;}
+    &:hover {
+        border-color: transparent;
+        background-color: $w-666;
+        color: $w-white;
+    }
+}
+
+a.btn-history, a:link.btn-history, a:visited.btn-history,
+button.btn-history {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    display: inline-block;
+    margin-top: -15px;
+    padding: 5px 13px 4px 11px;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    color: $w-666;
+    text-align: center;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    &:hover {
+        background-color: #fff;
+    }
+    @include mq('tablet') {
+        top: 65px;
+        left: 12px;
+        margin-top: -18px;
+        padding: 8px 12px;
+        font-size: 0.875rem;
+        letter-spacing: -1px;
+    }
+    @include mq('desktop') {
+        top: 100px;
+        left: 17px;
+        margin-top: -24px;
+        padding: 10px 17px;
+        font-size: 1.125rem;
+        letter-spacing: -1px;
+    }
+    span {
+        display: none;
+        @include mq('tablet') {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        @include mq('desktop') {
+            display: inline-block;
+        }
+    }
+}
+
+.btn-consult {
+    @extend %base;
+    margin-left: 5px;
+    padding: 0;
+    border: 0;
+    font-size: 0.875rem;
+    color: $w-333;
+    letter-spacing: -1px;
+    vertical-align: baseline;
+
+    @include mq('desktop') {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    &:hover {text-decoration: underline;}
+}
+
+.btn-area {
+	&__pwd {
+		padding-top: 20px;
+
+		@include mq('tablet') {
+			padding-top: 30px;
+		}
+		@include mq('desktop') {
+			padding-top: 50px;
+		}
+	}
+}
+
+.file-basic {
+	cursor: pointer;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+
+	&__filename {
+		font-size: 0.875rem;
+		font-weight: 300;
+		height: 28px;
+		border: 0px;
+		width: 235px;
+		@include mq('tablet') {
+			width: 250px;
+		}
+
+		&::placeholder {
+			font-size: 0.875rem;
+			font-weight: 300;
+		}
+	}
+
+	&__temp-btn {
+		background: #fff;
+		-moz-border-radius: 2px;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		color: #666;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 0.875rem;
+		margin-right: 10px;
+		padding: 3px 14px;
+		border: 1px solid #999;
+	}
+	input[type='file'] {
+		cursor: pointer;
+		font-size: 23px !important;
+		filter: alpha(opacity=1);
+		-moz-opacity: 0.01;
+		opacity: 0.01;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}

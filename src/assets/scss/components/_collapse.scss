@@ -1,0 +1,66 @@
+// -collapse
+
+.gt {
+    &-btn-toggle {
+        color: $w-666;
+        @include mq('desktop') {
+            margin-top: 14px;
+        }
+    }
+    &-collapse {
+        border-top: 1px solid $collapseboldline;
+        color: $collapsedefault;
+        > ul > li {
+            padding: 15px 10px;
+            border-bottom: 1px solid $collapseline;
+            font-size: 0.875rem;
+            @include mq('desktop') {
+                padding: 20px;
+                font-size: 1rem;
+            }
+        }
+        &-item {
+            position: relative;
+            &.gt-active {
+                background: $collapseactive;
+                .gt-collapse-header {
+                    .iscollapse {
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+        &-header {
+            position: relative;
+            padding-right: 12px;
+            color: $collapsebold;
+            cursor: pointer;
+            .iscollapse {
+                position: absolute;
+                top: 4px;
+                right: 0;
+                transform: rotate(0deg);
+                @include mq('tablet') {
+                }
+            }
+            @include clearfix;
+        }
+        &-content {
+            display: none;
+            padding-top: 10px;
+            @include mq('desktop') {
+                padding-top: 15px;
+            }
+        }
+    }
+
+}
+
+.icon-expand {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAHCAIAAABRDCAKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALZJREFUeNpUTjEKhDAQ9E58QAwKtr7BN6WzSfIIC1HT+gV/k0YUFBQMKAEbiYXF3XppvCmGZWaYWWee56IojuP4/AOUsizBdaMo6vu+bdskSTzPc34wxlRVNQzDsixu0zRSSqVU13U2dJ6nEGKapjAM0zR9QeG+7zC0bVscx4SQuq7HcQyCgDGGELoTUAuhPM+11tBxXRfGmHPu+z5YbzsMWUopMNj2tvaN5//rumZZBvwUvwIMAIhmhrfSNNCaAAAAAElFTkSuQmCC') 0 0 no-repeat;
+}

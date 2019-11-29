@@ -1,11 +1,11 @@
 <template>
     <div id="app">
         <header class="header-global">
-            <h1 class="nav-logo">+ combric</h1>
+            <h1 class="nav-logo">+ FEBRICK</h1>
             <div id="nav" class="nav-bar">
                 <!-- <router-link to="/">Home</router-link> | -->
-                <router-link to="/component" class="nav-bar-link">Component</router-link> |
-                <router-link to="/brick" class="nav-bar-link">Brick</router-link>
+                <router-link to="/brick" class="nav-bar-link">Brick</router-link> |
+                <router-link to="/component" class="nav-bar-link">Component</router-link>
             </div>
         </header>
         <router-view/>
@@ -13,12 +13,6 @@
 </template>
 
 <style lang="scss">
-#app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-}
 .header-global {
     @include clearfix();
 }
@@ -49,15 +43,5 @@
             color: #42b983;
         }
     }
-}
-.children-nav {
-    margin-bottom: 30px;
-}
-.guide-case-title {
-    margin-top: 20px;
-    padding: 15px 15px 10px;
-    text-align: left;
-    font-size: calc(1.325rem + .9vw);
-    font-weight: normal;
 }
 </style>

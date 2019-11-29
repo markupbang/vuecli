@@ -1,0 +1,95 @@
+// Layer
+
+.gt-layer {
+	@include mq('desktop') {
+		position: relative;
+		display: inline-block;
+		zoom: 1;
+		// display: inline;
+	}
+	.gt-layer-wrap {
+        font-size: .875rem;
+		z-index: 1030;
+		@include mq('desktop', max) {
+			position: fixed;
+			top: 0;
+			right: 0 !important;
+			bottom: 0;
+			left: 0 !important;
+			width: 100% !important;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+		}
+		@include mq('desktop') {
+			position: absolute;
+			width: 610px;
+            font-size: 1rem;
+            &.align-right {
+                right: -100px;
+            }
+		}
+	}
+
+	.gt-layer-header {
+		padding: 18px 30px;
+		background: $w-gray;
+		color: #fdd768;
+	}
+
+	.gt-layer-body {
+		height: 100%;
+		padding: 30px 30px 90px;
+		overflow-y: auto;
+		border: 1px solid $w-ccc;
+		background: $w-white;
+		white-space: normal;
+		@include mq('desktop') {
+			max-height: 450px;
+			padding: 30px;
+		}
+	}
+
+	.gt-layer-close {
+		position: absolute;
+		top: 20px;
+		right: 14px;
+		:hover {
+			cursor: pointer;
+		}
+	}
+
+	//layer animate
+    .gt-animate-opacity {animation: animatepopup 0.2s forwards;}
+    @keyframes animatepopup {
+        0% { opacity: 0;transform: scale(0.94); }
+        100% { opacity: 1;transform: scale(1); }
+    }
+
+    .gt-animate-zoom { animation: animatezoom 0.2s; }
+    @keyframes animatezoom {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+}
+
+.gt-open-layer {
+	width: 18px;
+	height: 18px;
+	margin-left: 5px;
+	margin-bottom: 4px;
+    background: url('https://static.gabia.com/responsive/assets/common/images/icon_layeropen.svg') no-repeat 0 0;
+	&:hover {
+		background-image: url('https://static.gabia.com/responsive/assets/common/images/icon_layeropen_hover.svg');
+	}
+}
+
+.layer-title {
+	padding-bottom: 20px;
+    color: $w-333;
+}
+.gt-layer-body {
+	color: $w-666;
+}
+.layer-bottom {
+	padding-bottom: 25px;
+}

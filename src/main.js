@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import '@/assets/scss/style.scss';
 import router from './router'
+import '@/assets/scss/style.scss';
+import "@/assets/js/jquery.matchHeight.js";
+window.$ = window.jQuery = require("jquery");
 
 Vue.config.productionTip = false
 

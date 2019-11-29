@@ -1,11 +1,39 @@
 @charset "utf-8";
 
+//base
+@import "base/_typography.scss";
+@import "base/_variables.scss";
+@import "base/_reset.scss";
+
+//vandors
+@import "vendors/_font-awesome-5.7.2.scss";
+
+//components
+@import "components/_button.scss";
+@import "components/_lists.scss";
+@import "components/_layer.scss";
+@import "components/_collapse.scss";
+
+//layout
+@import "layout/_layout.scss";
+@import "layout/_grid.scss";
+
+// helper
+@import "helper/helper";
+
 // bricks
 @import "bricks/about";
 @import "bricks/addition";
-@import "bricks/subheader";
+@import "bricks/block";
+@import "bricks/consult";
+@import "bricks/detailHeader";
+@import "bricks/event";
+@import "bricks/faq";
+@import "bricks/items";
+@import "bricks/library";
 @import "bricks/notice";
+@import "bricks/plan";
+@import "bricks/quotation";
+@import "bricks/subheader";
 
-// helper
-@import "helper/helper"
 

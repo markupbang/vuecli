@@ -20,13 +20,21 @@ const routes = [
   },
   {
     path: '/brick',
-    name: 'Brick',
+    name: 'brick',
     component: () => import('../views/Brick.vue'),
     children: [
+      { path: '', component: () => import('@/components/BrickHome.vue') },
       { path: 'about', component: () => import('@/components/About.vue')},
       { path: 'addition', component: () => import('@/components/Addition.vue')},
       { path: 'subheader', component: () => import('@/components/Subheader.vue')},
-      { path: 'notice', component: () => import('@/components/Notice.vue')}
+      { path: 'notice', component: () => import('@/components/Notice.vue')},
+      { path: 'grid', component: () => import('@/components/Grid.vue')},
+      { path: 'eventbnr', component: () => import('@/components/EventBnr.vue')},
+      { path: 'plan', component: () => import('@/components/Plan.vue')},
+      { path: 'bricktitle', component: () => import('@/components/BrickTitle.vue')},
+      { path: 'item', component: () => import('@/components/Item.vue')},
+      { path: 'consult', component: () => import('@/components/Consult.vue')},
+      { path: 'faq', component: () => import('@/components/Faq.vue')}
     ]
   }
 ]

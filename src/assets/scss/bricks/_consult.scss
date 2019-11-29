@@ -1,4 +1,5 @@
 // brick-consult
+
 .brick-consult {
     @include clearfix;
     padding: 40px 15px;
@@ -67,7 +68,7 @@
             width: 20px;
             height: 21px;
             margin-right: 10px;
-            background: url('/responsive/assets/common/images/ico-cs-phone.svg')
+            background: url('https://static.gabia.com/responsive/assets/common/images/ico-cs-phone.svg')
                 no-repeat 0 50%;
             background-size: 20px 21px;
 
